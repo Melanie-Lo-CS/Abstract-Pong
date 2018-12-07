@@ -1,4 +1,4 @@
-class LeftPaddle extends Object{
+class RightPaddle extends Object{
  
   private color c;
   float xspeed;
@@ -7,7 +7,7 @@ class LeftPaddle extends Object{
   float height;
   
   
-  private LeftPaddle(float x, float y, float width, float height, color c){
+  private RightPaddle(float x, float y, float width, float height, color c){
    
     super(x, y);
      println("making it at " + x + ", " + y);
@@ -19,17 +19,17 @@ class LeftPaddle extends Object{
   }
   
   void draw(){
-    
+     
    fill (c);
    rect(x,y,width,height);
   }
   
   void step(){
     
-   if (keyPressed){
-      if( key == 'w'){
+    
+if( keyCode == UP){
         
-      y+=-5;
+      y+=-4;
       
     }
     
@@ -38,21 +38,14 @@ class LeftPaddle extends Object{
     }
     
     
-    if (key == 's'){
+    if (keyCode == DOWN){
      
-      y+=5;
+      y+=4;
     }
     
     
      if (y > 550){
       y = 550;
-
-
-    
+    }
   }
-}
-
-}
-    
-
 }
